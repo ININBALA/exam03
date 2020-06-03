@@ -66,7 +66,6 @@ mqttc.subscribe(topic, 0)
 
 num = 0
 
-print("")
 
 while num != 100:
 
@@ -78,7 +77,7 @@ while num != 100:
 
       mqttc.loop()
 
-      time.sleep(1.5)
+      time.sleep(0.5)
 
       num += 1
 
