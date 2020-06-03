@@ -15,7 +15,7 @@ mqttc = paho.Client()
 
 # TODO: revise host to your ip
 
-host = "192.168.1.113"
+host = "192.168.44.134"
 
 topic = "velocity"
 
@@ -69,7 +69,7 @@ num = 0
 
 while num != 100:
 
-      ret = mqttc.publish(topic, "Message from Python!\n", qos=0)
+      ret = mqttc.publish(topic, qos=0)
 
       if (ret[0] != 0):
 

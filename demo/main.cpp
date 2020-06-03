@@ -303,6 +303,7 @@ void getAcc(Arguments *in, Reply *out) {
   if(i > 0)
     velocity = sqrt((a[i] - a[i-1]) * (a[i] - a[i-1]) + (b[i] - b[i-1]) * (b[i] - b[i-1]))/0.5;
    pc.printf("%1.4f",velocity);
+  i++;
 
 }
 void getAddr(Arguments *in, Reply *out) {

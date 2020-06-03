@@ -19,7 +19,7 @@ s = serial.Serial(serdev, 9600)
 
 mqttc = paho.Client()
 
-host = "192.168.1.113"
+host = "192.168.44.134"
 
 topic = "velocity"
 
@@ -130,7 +130,7 @@ while True:
     line=s.readline() # Read an echo string from K66F terminated with '\n' (pc.putc())
 
     #print(line)
-    ret = mqttc.publish(topic, "%s\n", line, qos=0)
+    ret = mqttc.publish(topic,line, qos=0)
 
     if (ret[0] != 0):
 
@@ -140,5 +140,5 @@ while True:
 
     time.sleep(0.5)
 
-
+mqttc.loop_forever()
 s.close()
